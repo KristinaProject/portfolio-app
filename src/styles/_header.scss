@@ -1,13 +1,21 @@
 @use './variables' as v;
+@use './mixins' as m;
+
+header {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 10px 10px 5px v.$light-shadow;
+  padding: 30px 0;
+  width: v.$main-width;
+  margin: 0 auto;
+}
 
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  width: v.$main-width;
-  align-items: center;
-  justify-content: center;
+  @include m.flex-center;
+  justify-content: flex-end;
 }
 
 .headerButton {
@@ -15,4 +23,5 @@ ul {
   color: v.$main-light;
   padding: 5px 10px;
   border: 2px solid v.$main-light;
+  margin: 0 20px;
 }
