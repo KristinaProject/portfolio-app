@@ -1,5 +1,6 @@
 @use "styles/_variables" as v;
 @use "styles/header";
+@use 'styles/error';
 
 .App {
  width: 100%;
