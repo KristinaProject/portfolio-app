@@ -2,10 +2,10 @@
 @use './mixins' as m;
 
 header {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  box-shadow: 10px 10px 5px v.$light-shadow;
-  padding: 30px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 5px 20px v.$light-shadow;
+  padding: 20px 20px;
   width: v.$main-width;
   margin: 0 auto;
 }
@@ -21,7 +21,17 @@ ul {
 .headerButton {
   background-color: v.$main-dark;
   color: v.$main-light;
-  padding: 5px 10px;
-  border: 2px solid v.$main-light;
-  margin: 0 20px;
+  padding: 10px;
+  margin: 0 0 0 20px;
+  font-size: v.$medium-fs;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: v.$main-font;
+}
+
+.headerButton:hover {
+  border: 1px solid v.$main-light;
+  box-shadow: 0 0 20px v.$light-shadow;
+  padding: 10px 20px;
+  margin: 0;
 }

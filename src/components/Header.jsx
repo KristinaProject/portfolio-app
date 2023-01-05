@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <header>
       <div></div>
       <ul>
-        <li className="headerButton">main</li>
-        <li className="headerButton">about</li>
-        <li className="headerButton">project</li>
+        <li><Link className="headerButton" to={'/'}>Home</Link></li>
+        <li><Link className="headerButton" to={'/about'}>About</Link></li>
+        <li><Link className="headerButton" to={'/portfolio'}>Portfolio</Link></li>
+        <li><Link className="headerButton" to={'/contact'}>Contact</Link></li>
       </ul>
     </header>
   );
