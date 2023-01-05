@@ -20,7 +20,7 @@ ul {
   background-color: rgb(50, 80, 46);
   color: rgb(243, 239, 204);
   padding: 10px;
-  margin: 0 0 0 20px;
+  margin: 0 20px;
   font-size: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -31,7 +31,7 @@ ul {
   border: 1px solid rgb(243, 239, 204);
   box-shadow: 0 0 20px rgba(243, 239, 204, 0.5);
   padding: 10px 20px;
-  margin: 0;
+  margin: 0 9px;
 }
 
 .App {
