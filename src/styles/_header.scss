@@ -1,0 +1,18 @@
+@use './variables' as v;
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  width: v.$main-width;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerButton {
+  background-color: v.$main-dark;
+  color: v.$main-light;
+  padding: 5px 10px;
+  border: 2px solid v.$main-light;
+}

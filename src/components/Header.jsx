@@ -1,5 +1,11 @@
-export function Header () {
+export function Header() {
   return (
-    <p>header</p>
-  )
+    <header>
+      <ul>
+        <li className="headerButton">main</li>
+        <li className="headerButton">about</li>
+        <li className="headerButton">project</li>
+      </ul>
+    </header>
+  );
 }
