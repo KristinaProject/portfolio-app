@@ -2,13 +2,13 @@
 @use './mixins' as m;
 
 header {
-  background: linear-gradient(45deg, v.$main-dark 5%, v.$main-light 95%);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  @include m.background-gradient;
+  border-bottom-left-radius: v.$radius-twenty;
+  border-bottom-right-radius: v.$radius-twenty;
   box-shadow: 0 5px 20px v.$light-shadow;
-  padding: 20px 20px;
+  padding: 20px;
   width: v.$main-width;
-  margin: 0 auto;
+  @include m.margin-za;
 }
 
 ul {

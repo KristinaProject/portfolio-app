@@ -1,4 +1,18 @@
-@mixin flex-center{
+@use "./variables" as v;
+
+@mixin flex-center {
   display: flex;
   align-items: center;
+}
+
+@mixin background-gradient {
+  background: linear-gradient(145deg, v.$main-dark, v.$main-light 45%);
+}
+
+@mixin background-gradient-f {
+  background: linear-gradient(145deg, v.$main-light 50%, v.$main-dark);
+}
+
+@mixin margin-za {
+  margin: 0 auto;
 }
