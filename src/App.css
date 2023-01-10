@@ -60,6 +60,7 @@ footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 20px;
+  box-shadow: 0 -5px 20px rgba(50, 80, 46, 0.5);
 }
 
 footer p {

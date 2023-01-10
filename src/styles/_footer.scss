@@ -1,5 +1,5 @@
-@use './variables' as v;
-@use './mixins' as m;
+@use "./variables" as v;
+@use "./mixins" as m;
 
 footer {
   @include m.background-gradient-f;
@@ -8,6 +8,7 @@ footer {
   border-top-left-radius: v.$radius-twenty;
   border-top-right-radius: v.$radius-twenty;
   padding: 20px;
+  box-shadow: 0 -5px 20px v.$dark-shadow;
 }
 
 footer p {

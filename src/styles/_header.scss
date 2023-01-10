@@ -5,7 +5,7 @@ header {
   @include m.background-gradient;
   border-bottom-left-radius: v.$radius-twenty;
   border-bottom-right-radius: v.$radius-twenty;
-  box-shadow: 0 5px 20px v.$light-shadow;
+  box-shadow: 0 5px 20px v.$dark-shadow;
   padding: 20px;
   width: v.$main-width;
   @include m.margin-za;
@@ -31,7 +31,7 @@ ul {
 
 .headerButton:hover {
   border: 1px solid v.$main-light;
-  box-shadow: 0 0 20px v.$light-shadow;
+  box-shadow: 0 0 20px v.$dark-shadow;
   padding: 10px 20px;
   margin: 0 9px;
 }
