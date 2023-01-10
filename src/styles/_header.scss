@@ -2,6 +2,7 @@
 @use './mixins' as m;
 
 header {
+  background: linear-gradient(45deg, v.$main-dark 5%, v.$main-light 95%);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0 5px 20px v.$light-shadow;
@@ -19,8 +20,7 @@ ul {
 }
 
 .headerButton {
-  background-color: v.$main-dark;
-  color: v.$main-light;
+  color: v.$main-dark;
   padding: 10px;
   margin: 0 20px;
   font-size: v.$medium-fs;
