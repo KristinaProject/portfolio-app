@@ -1,0 +1,6 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+#main {
+  background: radial-gradient(v.$main-light, v.$main-dark);
+}
