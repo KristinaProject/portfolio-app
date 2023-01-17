@@ -1,37 +1,33 @@
-@use './variables' as v;
-@use './mixins' as m;
+@use "./variables" as v;
+@use "./mixins" as m;
 
 header {
-  @include m.background-gradient;
-  border-bottom-left-radius: v.$radius-twenty;
-  border-bottom-right-radius: v.$radius-twenty;
-  box-shadow: 0 5px 20px v.$dark-shadow;
   padding: 20px;
   width: v.$main-width;
   @include m.margin-za;
-}
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  @include m.flex-center;
-  justify-content: flex-end;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include m.flex-center;
+    justify-content: flex-end;
 
-.headerButton {
-  color: v.$main-dark;
-  padding: 10px;
-  margin: 0 20px;
-  font-size: v.$medium-fs;
-  cursor: pointer;
-  text-decoration: none;
-  font-family: v.$main-font;
-}
+    .headerButton {
+      color: v.$main-dark;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: v.$medium-fs;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: v.$main-font;
+      transition: 100ms;
+      display: inline-block;
+    }
 
-.headerButton:hover {
-  border: 1px solid v.$main-light;
-  box-shadow: 0 0 20px v.$dark-shadow;
-  padding: 10px 20px;
-  margin: 0 9px;
+    .headerButton:hover {
+      -webkit-transform: scale(1.4);
+      transform: scale(1.4);
+    }
+  }
 }

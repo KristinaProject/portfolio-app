@@ -2,18 +2,14 @@
 @use "./mixins" as m;
 
 footer {
-  @include m.background-gradient-f;
   @include m.margin-za;
   width: v.$main-width;
-  border-top-left-radius: v.$radius-twenty;
-  border-top-right-radius: v.$radius-twenty;
   padding: 20px;
-  box-shadow: 0 -5px 20px v.$dark-shadow;
-}
-
-footer p {
-  font-family: v.$main-font;
-  margin: 0;
   text-align: center;
-  color: v.$main-dark;
+
+  footer p {
+    font-family: v.$main-font;
+    margin: 0;
+    color: v.$main-dark;
+  }
 }
