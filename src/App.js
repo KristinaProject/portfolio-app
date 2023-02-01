@@ -1,14 +1,14 @@
-import './App.scss';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Main } from './components/Main';
+import { Outlet } from "react-router";
+import "./App.scss";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+        <Header />
+        <Outlet />
+        <Footer />
     </div>
   );
 }
