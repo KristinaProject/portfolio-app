@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { useSpring, animated, useTrail } from "react-spring";
-import { interpolate } from 'ReactSpringHooks'
+import { useSpring, animated, useTrail, to } from "react-spring";
 
 const Hello = ["H", "e", "l", "l", "o"];
+const World = ["W", "o", "r", "l", "d"];
 
 function Trail({ open, children, ...props }) {
   const items = React.Children.toArray(children);
@@ -27,7 +27,7 @@ function Trail({ open, children, ...props }) {
           className="trails-text"
           style={{
             ...rest,
-            transform: interpolate(
+            transform: to(
               [
                 x.to({
                   range: [0, 0.9, 1],
@@ -41,7 +41,6 @@ function Trail({ open, children, ...props }) {
               (x, y) => `scale(${x},${y})`
             ),
           }}
-
         >
           {items[index]}
         </animated.div>
@@ -64,7 +63,7 @@ function Sqeez({ children }) {
     <animated.div
       onMouseEnter={() => toggle(true)}
       style={{
-        transform: interpolate(
+        transform: to(
           [
             x.to({
               range: [0, 0.3, 1],
@@ -89,6 +88,10 @@ export function Main() {
     <div id="main">
       <Trail>
         {Hello.map((word) => (
+          <Sqeez className="letter">{word}</Sqeez>
+        ))}
+        &nbsp;&nbsp;
+        {World.map((word) => (
           <Sqeez className="letter">{word}</Sqeez>
         ))}
       </Trail>
