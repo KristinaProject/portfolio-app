@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { useSpring, animated, useTrail, interpolate } from "react-spring";
+import { useSpring, animated, useTrail } from "react-spring";
+import { interpolate } from 'ReactSpringHooks'
 
 const Hello = ["H", "e", "l", "l", "o"];
 
@@ -26,13 +27,13 @@ function Trail({ open, children, ...props }) {
           className="trails-text"
           style={{
             ...rest,
-            trasform: interpolate(
+            transform: interpolate(
               [
-                x.interpolate({
+                x.to({
                   range: [0, 0.9, 1],
                   output: [0, 1.2, 1],
                 }),
-                y.interpolate({
+                y.to({
                   range: [0, 0.9, 1],
                   output: [0, 0.8, 1],
                 }),
@@ -40,6 +41,7 @@ function Trail({ open, children, ...props }) {
               (x, y) => `scale(${x},${y})`
             ),
           }}
+
         >
           {items[index]}
         </animated.div>
@@ -64,16 +66,16 @@ function Sqeez({ children }) {
       style={{
         transform: interpolate(
           [
-            x.interpolate({
+            x.to({
               range: [0, 0.3, 1],
               output: [1, 1.3, 1],
             }),
-            y.interpolate({
+            y.to({
               range: [0, 0.3, 1],
               output: [0, 0.7, 1],
             }),
           ],
-          (x, y) => `scale(${x}, ${y})`
+          (x, y) => `scale(${x},${y})`
         ),
       }}
     >
@@ -83,18 +85,13 @@ function Sqeez({ children }) {
 }
 
 export function Main() {
-  const anim = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 1500 },
-  });
   return (
-    <animated.div style={anim} id="main">
+    <div id="main">
       <Trail>
         {Hello.map((word) => (
           <Sqeez className="letter">{word}</Sqeez>
         ))}
       </Trail>
-    </animated.div>
+    </div>
   );
 }
