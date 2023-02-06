@@ -8,7 +8,7 @@ const World = ["W", "o", "r", "l", "d"];
 function Trail({ open, children, ...props }) {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
-    config: { mass: 5, tension: 2000, friction: 135 },
+    config: { mass: 10, tension: 1000, friction: 235 },
     opacity: 1,
     x: 1,
     y: 1,
@@ -27,28 +27,16 @@ function Trail({ open, children, ...props }) {
           className="trails-text"
           style={{
             ...rest,
-            transform: [
-              x.to({ range: [0, 0.9, 1], output: [0, 1.2, 1] }),
-              y.to({
-                range: [0, 0.9, 1],
-                output: [0, 0.8, 1],
-              }),
-            (x, y) => `scale(${x},${y})`
-            ],
-
-            // to(
-            // [
-            // x.to({
-            //   range: [0, 0.9, 1],
-            //   output: [0, 1.2, 1],
-            // }),
-            // y.to({
-            //   range: [0, 0.9, 1],
-            //   output: [0, 0.8, 1],
-            // }),
-            // ],
-            // (x, y) => `scale(${x},${y})`
-            // ),
+            transform: to(
+              [
+                x.to({ range: [0, 0.9, 1], output: [0, 1.2, 1] }),
+                y.to({
+                  range: [0, 0.9, 1],
+                  output: [0, 0.8, 1],
+                }),
+              ],
+              (x, y) => `scale(${x},${y})`
+            ),
           }}
         >
           {items[index]}
@@ -59,34 +47,29 @@ function Trail({ open, children, ...props }) {
 }
 
 function Sqeez({ letter }) {
-  // const [state, toggle] = useState(false);
-  // const { x, y } = useSpring({
-  //   from: { x: !state ? 1 : 0, y: !state ? 1 : 0 },
-  //   to: { x: 1, y: 1 },
-  //   config: { mass: 0.5, tension: 120, friction: 2, precision: 0.001 },
-  //   reset: false,
-  //   reverse: state,
-  // onStart: (state) => toggle(false),
-  // });
+  const [state, toggle] = useState(true);
+  const { x } = useSpring({
+    from: { x: !state ? 1 : 0, y: !state ? 1 : 0 },
+    to: { x: 1, y: 1 },
+    config: { mass: 1, tension: 300, friction: 2, precision: 0.01 },
+    reset: state,
+  });
+  console.log(state);
 
   return (
     <animated.div
-    // onMouseEnter={() => toggle(!state)}
-    // style={{
-    //   transform: to(
-    //     [
-    //       x.to({
-    //         range: [0, 0.3, 1],
-    //         output: [1, 1.3, 1],
-    //       }),
-    //       y.to({
-    //         range: [0, 0.3, 1],
-    //         output: [0, 0.7, 1],
-    //       }),
-    //     ],
-    //     (x, y) => `scale(${x},${y})`
-    //   ),
-    // }}
+      onMouseEnter={() => toggle(!state)}
+      style={{
+        transform: to(
+          [
+            x.to({
+              range: [0, 0.3, 1],
+              output: [1, 1.2, 1],
+            })
+          ],
+          (x) => `scale(${x})`
+        ),
+      }}
     >
       {letter}
     </animated.div>
