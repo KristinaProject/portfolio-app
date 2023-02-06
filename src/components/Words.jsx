@@ -21,12 +21,12 @@ function Trail({ open, children, ...props }) {
   });
   return (
     <>
-      {trail.map(({ x, y, ...rest }, index) => (
+      {trail.map(({ x, y, ...style }, index) => (
         <animated.div
           key={items[index]}
           className="trails-text"
           style={{
-            ...rest,
+            ...style,
             transform: to(
               [
                 x.to({ range: [0, 0.9, 1], output: [0, 1.2, 1] }),
@@ -47,8 +47,8 @@ function Trail({ open, children, ...props }) {
 }
 
 function Sqeez({ letter }) {
-  const [state, toggle] = useState(true);
-  const { x, y } = useSpring({
+  const [state, toggle] = useState(false);
+  const { x } = useSpring({
     from: { x: !state ? 1 : 0, y: !state ? 1 : 0 },
     to: { x: 1, y: 1 },
     config: { mass: 1, tension: 300, friction: 2, precision: 0.01 },
@@ -81,10 +81,7 @@ export function Words() {
       <Trail>
         {Hello.map((letter) => (
           <Sqeez className="letter" key={letter} letter={letter} />
-        ))}
-      </Trail>
-      &nbsp;&nbsp;
-      <Trail>
+        ))}&nbsp;&nbsp;
         {World.map((letter) => (
           <Sqeez className="letter" key={letter} letter={letter} />
         ))}
