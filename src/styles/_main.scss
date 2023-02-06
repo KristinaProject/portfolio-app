@@ -1,16 +1,33 @@
-@use './variables' as v;
-@use './mixins' as m;
+@use "./variables" as v;
+@use "./mixins" as m;
 
 #main {
-  background: linear-gradient(#D26B9D, #4E499E);
-  @include m.flex-center;
-  justify-content: center;
-  font-size: 100px;
+  background: linear-gradient(#d26b9d, #4e499e);
   font-weight: bold;
-  color: white;
+  font-style: oblique;
 
-  div {
-    transition: .3s color;
-    cursor: pointer;
+  #wrapper {
+    position: relative;
+    max-width: v.$main-width;
+    width: 100%;
+    @include m.margin-za;
+
+    #words {
+      @include m.flex-center;
+      justify-content: center;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      margin: 0;
+      font-size: 100px;
+
+      div {
+        transition: 0.3s color;
+        cursor: pointer;
+        background-image: radial-gradient(#4e499e 30%, #cf23cf);
+        background-clip: text;
+        color: transparent;
+      }
+    }
   }
 }
