@@ -3,7 +3,8 @@
 
 header {
   padding: 20px;
-  width: v.$main-width;
+  max-width: v.$main-width;
+  width: 100%;
   @include m.margin-za;
 
   ul {

@@ -2,17 +2,18 @@
 @use "./mixins" as m;
 
 #main {
-  background: linear-gradient(#d26b9d, #4e499e);
-  font-weight: bold;
+  @include m.bg-gradient;
   font-style: oblique;
 
   #wrapper {
     position: relative;
     max-width: v.$main-width;
     width: 100%;
+    height: 100%;
     @include m.margin-za;
 
     #words {
+      font-weight: bold;
       @include m.flex-center;
       justify-content: center;
       position: absolute;
@@ -27,6 +28,18 @@
         background-image: radial-gradient(#4e499e 30%, #cf23cf);
         background-clip: text;
         color: transparent;
+      }
+    }
+
+    #text {
+      position: absolute;
+      bottom: 300px;
+      right: 100px;
+      color: white;
+      width: 50%;
+
+      p {
+        font-size: v.$medium-fs;
       }
     }
   }

@@ -8,3 +8,7 @@
 @mixin margin-za {
   margin: 0 auto;
 }
+
+@mixin bg-gradient {
+  background: linear-gradient(#d26b9d, #4e499e);
+}

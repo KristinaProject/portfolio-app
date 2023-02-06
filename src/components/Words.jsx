@@ -48,7 +48,7 @@ function Trail({ open, children, ...props }) {
 
 function Sqeez({ letter }) {
   const [state, toggle] = useState(true);
-  const { x } = useSpring({
+  const { x, y } = useSpring({
     from: { x: !state ? 1 : 0, y: !state ? 1 : 0 },
     to: { x: 1, y: 1 },
     config: { mass: 1, tension: 300, friction: 2, precision: 0.01 },

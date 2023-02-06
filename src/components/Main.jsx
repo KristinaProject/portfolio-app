@@ -7,8 +7,8 @@ export function Main() {
         <Words />
         <div id="text">
           <p>
-            I say hello to the world! My name Kristina Jachimovič. I am front end developer. Looking for a job in web development!
-            
+            I say hello to the world! My name is Kristina Jachimovič. I am front
+            end developer. Looking for a job in web development!
           </p>
         </div>
       </div>
