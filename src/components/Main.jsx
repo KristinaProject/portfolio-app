@@ -15,7 +15,7 @@ function Text({ children }) {
 
 export function Main() {
   return (
-    <div id="main">
+    <div className="bg">
       <div id="wrapper">
         <Words />
         <Text>

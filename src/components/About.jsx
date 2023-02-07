@@ -1,3 +1,6 @@
 export function About() {
-  return <p>about</p>
+  return <div className="bg">
+    <h1>Hi!</h1>
+    <p></p>
+  </div>;
 }
