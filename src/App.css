@@ -62,13 +62,15 @@ footer p {
   background: linear-gradient(#d26b9d, #4e499e);
   font-style: oblique;
 }
-.bg #about {
+.bg .about {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 50px;
 }
-.bg #about h1 {
+.bg .about h1 {
   font-size: 45px;
+  margin-top: 0;
 }
 .bg .wrapper {
   position: relative;
@@ -103,7 +105,7 @@ footer p {
 .bg .wrapper .text p {
   font-size: 18px;
 }
-.bg .wrapper #tools {
+.bg .wrapper .tools {
   color: white;
   display: flex;
   align-items: center;
@@ -111,10 +113,11 @@ footer p {
   justify-content: center;
   width: 50%;
 }
-.bg .wrapper #tools h2 {
+.bg .wrapper .tools h2 {
   font-size: 35px;
+  margin-top: 0;
 }
-.bg .wrapper #tools ul {
+.bg .wrapper .tools ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -122,8 +125,41 @@ footer p {
   grid-template-columns: auto auto;
   gap: 20px;
 }
-.bg .wrapper #tools ul .logo {
+.bg .wrapper .tools ul .logo {
   width: 6rem;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 200px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}
+.cont ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.cont ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.cont ul li a {
+  color: white;
+  text-decoration: none;
+}
+.cont ul li .img {
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cont ul li .text-span {
+  margin-left: 10px;
 }
 
 .App {

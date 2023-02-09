@@ -12,15 +12,15 @@ export function About() {
     from: { opacity: 0 },
     to: { opacity: 1 },
     config: {
-      mass: 10, 
-      friction: 200, 
+      mass: 10,
+      friction: 200,
       tension: 100,
-    }
+    },
   });
 
   return (
     <div className="bg">
-      <div className="wrapper" id="about">
+      <div className="wrapper about">
         <div className="text">
           <h1>When dreams come true.</h1>
           <animated.div style={fade}>
@@ -46,7 +46,7 @@ export function About() {
             </p>
           </animated.div>
         </div>
-        <div id="tools">
+        <div className="tools">
           <h2>What I know</h2>
           <ul>
             <Trail>

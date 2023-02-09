@@ -12,3 +12,9 @@
 @mixin bg-gradient {
   background: linear-gradient(#d26b9d, #4e499e);
 }
+
+@mixin list-style {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

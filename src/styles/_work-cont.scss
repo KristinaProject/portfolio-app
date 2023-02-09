@@ -1,0 +1,35 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.cont {
+  @include m.flex-center;
+  flex-direction: column;
+  padding-top: 200px;
+  color: v.$text-color;
+  font-family: v.$main-font;
+  font-size: v.$medium-fs;
+
+  ul {
+    @include m.list-style;
+
+    li {
+      @include m.flex-center;
+      margin: 10px 0;
+
+      a {
+        color: v.$text-color;
+        text-decoration: none;
+      }
+
+      .img {
+        width: 35px;
+        @include m.flex-center;
+        justify-content: center;
+      }
+
+      .text-span {
+        margin-left: 10px;
+      }
+    }
+  }
+}

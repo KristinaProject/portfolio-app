@@ -5,12 +5,14 @@
   @include m.bg-gradient;
   font-style: oblique;
 
-  #about {
+  .about {
     @include m.flex-center;
+    justify-content: center;
     gap: 50px;
 
     h1 {
       font-size: 45px;
+      margin-top: 0;
     }
   }
 
@@ -49,21 +51,20 @@
       }
     }
 
-    #tools {
+    .tools {
       color: v.$text-color;
       @include m.flex-center;
       flex-direction: column;
       justify-content: center;
       width: 50%;
 
-      h2{ 
+      h2 {
         font-size: 35px;
+        margin-top: 0;
       }
 
       ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        @include m.list-style;
         display: grid;
         grid-template-columns: auto auto;
         gap: 20px;
