@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useSpring, animated, to } from "react-spring";
-import { Trail } from "./Trail";
+import { Trail } from "./utils/Trail";
 
 const Hello = ["H", "e", "l", "l", "o"];
 const World = ["W", "o", "r", "l", "d", "!"];

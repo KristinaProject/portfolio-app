@@ -4,26 +4,16 @@ import javascriptsvg from "../image/javascript-logo-vector.svg";
 import reactsvg from "../image/react-logo-vector-1.svg";
 import bootstrapsvg from "../image/bootstrap-logo-vector.svg";
 import sasspng from "../image/pngegg.png";
-import { Trail } from "./Trail";
-import { useSpring, animated } from "react-spring";
+import { Trail } from "./utils/Trail";
+import { Fade } from "./utils/Fade";
 
 export function About() {
-  const fade = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: {
-      mass: 10,
-      friction: 200,
-      tension: 100,
-    },
-  });
-
   return (
     <div className="bg">
       <div className="wrapper about">
         <div className="text">
           <h1>When dreams come true.</h1>
-          <animated.div style={fade}>
+          <Fade>
             <p>
               I got interested in IT several years ago, and as there are many
               strands of IT I decided to start with the front end in December
@@ -44,7 +34,7 @@ export function About() {
               competence in the job. Maybe it's you who will offer the dream
               job?
             </p>
-          </animated.div>
+          </Fade>
         </div>
         <div className="tools">
           <h2>What I know</h2>

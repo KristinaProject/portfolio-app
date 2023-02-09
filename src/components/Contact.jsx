@@ -1,12 +1,13 @@
 import linkedin from "../image/linkedin-logo.png";
 import { BsTelephone } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
+import { Fade } from "./utils/Fade";
 
 export function Contact() {
   return (
     <div className="bg">
       <div className="wrapper cont">
-        <div>
+        <Fade>
           <h1>You can contact me:</h1>
           <ul>
             <li>
@@ -33,7 +34,7 @@ export function Contact() {
               <span className="text-span">kristtule@gmail.com</span>
             </li>
           </ul>
-        </div>
+        </Fade>
       </div>
     </div>
   );
