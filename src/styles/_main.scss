@@ -5,7 +5,16 @@
   @include m.bg-gradient;
   font-style: oblique;
 
-  #wrapper {
+  #about {
+    @include m.flex-center;
+    gap: 50px;
+
+    h1 {
+      font-size: 45px;
+    }
+  }
+
+  .wrapper {
     position: relative;
     max-width: v.$main-width;
     width: 100%;
@@ -32,11 +41,36 @@
     }
 
     .text {
-      color: white;
+      color: v.$text-color;
       width: 50%;
 
       p {
         font-size: v.$medium-fs;
+      }
+    }
+
+    #tools {
+      color: v.$text-color;
+      @include m.flex-center;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+
+      h2{ 
+        font-size: 35px;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+
+        .logo {
+          width: 6rem;
+        }
       }
     }
   }

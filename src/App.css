@@ -62,14 +62,22 @@ footer p {
   background: linear-gradient(#d26b9d, #4e499e);
   font-style: oblique;
 }
-.bg #wrapper {
+.bg #about {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.bg #about h1 {
+  font-size: 45px;
+}
+.bg .wrapper {
   position: relative;
   max-width: 1200px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
-.bg #wrapper #words {
+.bg .wrapper #words {
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -80,7 +88,7 @@ footer p {
   margin: 0;
   font-size: 100px;
 }
-.bg #wrapper #words div {
+.bg .wrapper #words div {
   transition: 0.3s color;
   cursor: pointer;
   background-image: radial-gradient(#4e499e 30%, #cf23cf);
@@ -88,12 +96,34 @@ footer p {
           background-clip: text;
   color: transparent;
 }
-.bg #wrapper .text {
+.bg .wrapper .text {
   color: white;
   width: 50%;
 }
-.bg #wrapper .text p {
+.bg .wrapper .text p {
   font-size: 18px;
+}
+.bg .wrapper #tools {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.bg .wrapper #tools h2 {
+  font-size: 35px;
+}
+.bg .wrapper #tools ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+.bg .wrapper #tools ul .logo {
+  width: 6rem;
 }
 
 .App {
