@@ -1,0 +1,28 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+
+  .card {
+    background-color: aliceblue;
+    padding: 30px;
+    transition: all 1s ease-in;
+    cursor: pointer;
+
+    &__image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .card:hover {
+    transform: scale(1.5);
+    background-color: brown;
+  }
+}
