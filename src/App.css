@@ -163,15 +163,18 @@ footer p {
 }
 
 .cards-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 50px;
+  padding: 100px 0;
+  flex-wrap: wrap;
 }
 .cards-wrapper .card {
   background-color: aliceblue;
   padding: 30px;
   transition: all 1s ease-in;
   cursor: pointer;
+  max-width: 500px;
+  width: 100%;
 }
 .cards-wrapper .card__image {
   width: 100%;
@@ -180,8 +183,21 @@ footer p {
   width: 100%;
 }
 .cards-wrapper .card:hover {
-  transform: scale(1.5);
-  background-color: brown;
+  transform: scale(1.1);
+  background-color: red;
+}
+
+.modal {
+  width: 50%;
+  position: absolute;
+  background-color: red;
+  padding: 50px;
+}
+.modal__image {
+  width: 100%;
+}
+.modal__image img {
+  width: 100%;
 }
 
 .App {

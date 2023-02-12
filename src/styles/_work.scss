@@ -2,15 +2,18 @@
 @use "./mixins" as m;
 
 .cards-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 50px;
+  padding: 100px 0;
+  flex-wrap: wrap;
 
   .card {
     background-color: aliceblue;
     padding: 30px;
     transition: all 1s ease-in;
     cursor: pointer;
+    max-width: 500px;
+    width: 100%;
 
     &__image {
       width: 100%;
@@ -22,7 +25,23 @@
   }
 
   .card:hover {
-    transform: scale(1.5);
-    background-color: brown;
+    transform: scale(1.1);
+    background-color: red;
+  }
+}
+
+.modal {
+  width: 50%;
+  position: absolute;
+  background-color: red;
+  padding: 50px;
+  // box-shadow: ;
+
+  &__image {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 }

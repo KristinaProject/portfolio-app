@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Fade } from "./utils/Fade";
+import { WorkShow } from "./WorkShow";
 
 const works = [
   {
@@ -22,6 +23,13 @@ const works = [
 
 export function Work() {
   const [open, setOpen] = useState(false);
+  const [workItem, setWorkItem] = useState("");
+
+  function showModal(id) {
+    setOpen(true);
+    const finded = works.find((item) => item.id === id);
+    setWorkItem(finded);
+  }
 
   return (
     <div className="bg">
@@ -32,28 +40,27 @@ export function Work() {
               <div
                 className="card"
                 key={item.id}
-                onMouseOver={() => setOpen(true)}
+                onClick={() => showModal(item.id)}
               >
                 <div className="card__image">
                   <img src={item.image} alt={item.image} />
                 </div>
                 <div className="card__text">
                   <h2 className="card__text-title">{item.name}</h2>
-                  {open ? (
-                    <div>
-                      <p className="card__text-description">
-                        {item.description}
-                      </p>
-                      <p className="card__text-tools">{item.tools}</p>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
                 </div>
               </div>
             ))}
           </div>
         </Fade>
+        {open ? (
+          <WorkShow
+            setOpen={setOpen}
+            item={workItem}
+            setWorkItem={setWorkItem}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

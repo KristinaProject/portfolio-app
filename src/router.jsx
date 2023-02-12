@@ -5,7 +5,6 @@ import { Contact } from "./components/Contact";
 import { Error } from "./components/Error";
 import { Main } from "./components/Main";
 import { Work } from "./components/Work";
-import { Workproj } from "./components/Workproj";
 
 const router = createBrowserRouter([
   {
@@ -24,12 +23,6 @@ const router = createBrowserRouter([
       {
         path: "work",
         element: <Work />,
-        children: [
-          {
-            path: "work/:id",
-            element: <Workproj />,
-          },
-        ],
       },
       {
         path: "contact",
