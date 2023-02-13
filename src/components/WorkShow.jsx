@@ -9,16 +9,18 @@ export function WorkShow({ setOpen, item, setItem }) {
           <h2 className="modal__text-title">{item.name}</h2>
           <p className="modal__text-description">{item.description}</p>
           <p className="modal__text-tools">{item.tools}</p>
-          <button>Code</button>
-          <button>Live</button>
-          <button
-            onClick={() => {
-              setOpen(false);
-              setItem("");
-            }}
-          >
-            Close
-          </button>
+          <div className="modal__text-buttons">
+            <button>Code</button>
+            <button>Live</button>
+            <button
+              onClick={() => {
+                setOpen(false);
+                setItem("");
+              }}
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
