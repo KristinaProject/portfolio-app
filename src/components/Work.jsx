@@ -52,16 +52,12 @@ export function Work() {
             ))}
           </div>
         </Fade>
-        {open ? (
-          <WorkShow
-            setOpen={setOpen}
-            item={workItem}
-            setWorkItem={setWorkItem}
-          />
-        ) : (
-          <></>
-        )}
       </div>
+      {open ? (
+        <WorkShow setOpen={setOpen} item={workItem} setWorkItem={setWorkItem} />
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

@@ -30,17 +30,30 @@
   }
 }
 
-.modal {
-  width: 50%;
+#bg-modal {
   position: absolute;
-  background-color: red;
-  padding: 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include m.flex-center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
-  &__image {
-    width: 100%;
+  .modal {
+    width: 50%;
+    background-color: red;
+    padding: 50px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 
-    img {
+    &__image {
       width: 100%;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }

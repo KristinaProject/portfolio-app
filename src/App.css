@@ -187,16 +187,29 @@ footer p {
   background-color: red;
 }
 
-.modal {
-  width: 50%;
+#bg-modal {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+#bg-modal .modal {
+  width: 50%;
   background-color: red;
   padding: 50px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
-.modal__image {
+#bg-modal .modal__image {
   width: 100%;
 }
-.modal__image img {
+#bg-modal .modal__image img {
   width: 100%;
 }
 
