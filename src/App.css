@@ -78,6 +78,8 @@ footer p {
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
+  min-height: 750px;
 }
 .bg .wrapper #words {
   font-weight: bold;
@@ -111,7 +113,6 @@ footer p {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
 }
 .bg .wrapper .tools h2 {
   font-size: 35px;
@@ -165,7 +166,6 @@ footer p {
 .cards-wrapper {
   display: flex;
   gap: 50px;
-  padding: 100px 0;
   flex-wrap: wrap;
 }
 .cards-wrapper .card {
@@ -184,7 +184,7 @@ footer p {
 }
 .cards-wrapper .card:hover {
   transform: scale(1.1);
-  background-color: red;
+  background-color: #cb808b;
 }
 
 #bg-modal {

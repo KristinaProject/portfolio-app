@@ -22,6 +22,8 @@
     width: 100%;
     height: 100%;
     @include m.margin-za;
+    overflow: hidden;
+    min-height: 750px;
 
     #words {
       font-weight: bold;
@@ -56,7 +58,6 @@
       @include m.flex-center;
       flex-direction: column;
       justify-content: center;
-      width: 50%;
 
       h2 {
         font-size: 35px;
