@@ -80,6 +80,7 @@ footer p {
   margin: 0 auto;
   overflow: hidden;
   min-height: 750px;
+  padding: 0 50px;
 }
 .bg .wrapper #words {
   font-weight: bold;
@@ -134,7 +135,7 @@ footer p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 200px;
+  padding-top: 200px !important;
   color: white;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
