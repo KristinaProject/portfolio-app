@@ -214,7 +214,6 @@ footer p {
   display: flex;
   align-items: center;
   width: 50%;
-  justify-content: space-between;
 }
 #bg-modal .modal__text-buttons button {
   padding: 10px 30px;
@@ -223,6 +222,7 @@ footer p {
   border-bottom-width: 5px;
   color: white;
   font-family: "Raleway", sans-serif;
+  margin-right: 15px;
 }
 #bg-modal .modal__text-buttons button:hover {
   background-color: #58094f;

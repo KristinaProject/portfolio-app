@@ -10,14 +10,18 @@ const works = [
     tools: "react, html, sass, react-spring",
     image:
       "https://cdn.pixabay.com/photo/2023/01/13/15/47/flowers-7716360_960_720.jpg",
+    live: "",
+    code: "https://github.com/KristinaProject/portfolio-app",
   },
   {
     id: 2,
-    name: "example",
-    description: "example description",
-    tools: "example tools",
+    name: "Loading...",
+    description: "Loading...",
+    tools: "",
     image:
       "https://cdn.pixabay.com/photo/2022/11/03/03/05/apples-7566512_960_720.jpg",
+    live: '',
+    code: '',
   },
 ];
 

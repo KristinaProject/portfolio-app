@@ -1,4 +1,5 @@
 export function WorkShow({ setOpen, item, setItem }) {
+
   return (
     <div id="bg-modal">
       <div className="modal">
@@ -10,8 +11,8 @@ export function WorkShow({ setOpen, item, setItem }) {
           <p className="modal__text-description">{item.description}</p>
           <p className="modal__text-tools">{item.tools}</p>
           <div className="modal__text-buttons">
-            <button>Code</button>
-            <button>Live</button>
+            {item.code === "" ? <></> : <button>Code</button>}
+            {item.live === "" ? <></> : <button>Live</button>}
             <button
               onClick={() => {
                 setOpen(false);

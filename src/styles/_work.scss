@@ -61,7 +61,6 @@
       &-buttons {
         @include m.flex-center;
         width: 50%;
-        justify-content: space-between;
 
         button {
           padding: 10px 30px;
@@ -70,6 +69,7 @@
           border-bottom-width: 5px;
           color: v.$text-color;
           font-family: v.$main-font;
+          margin-right: 15px;
         }
 
         button:hover {
