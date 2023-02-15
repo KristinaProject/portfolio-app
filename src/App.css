@@ -201,7 +201,7 @@ footer p {
 }
 #bg-modal .modal {
   width: 50%;
-  background: radial-gradient(#6868ac, #119da4);
+  background: radial-gradient(#e9abb1, #a35c6e);
   padding: 50px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -223,6 +223,17 @@ footer p {
 }
 #bg-modal .modal__text-buttons button {
   padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #58094f;
+  border-bottom-width: 5px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+#bg-modal .modal__text-buttons button:hover {
+  background-color: #58094f;
+}
+#bg-modal .modal__text-buttons button:active {
+  background-color: #e9abb1;
 }
 
 .App {

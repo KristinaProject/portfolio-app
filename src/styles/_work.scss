@@ -42,7 +42,7 @@
 
   .modal {
     width: 50%;
-    background: radial-gradient(#6868ac, #119da4);
+    background: radial-gradient(#e9abb1, #a35c6e);
     padding: 50px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -65,6 +65,19 @@
 
         button {
           padding: 10px 30px;
+          background-color: transparent;
+          border: 2px solid v.$btn-bg;
+          border-bottom-width: 5px;
+          color: v.$text-color;
+          font-family: v.$main-font;
+        }
+
+        button:hover {
+          background-color: v.$btn-bg;
+        }
+
+        button:active {
+          background-color: #e9abb1;
         }
       }
     }
