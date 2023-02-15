@@ -1,5 +1,4 @@
-import linkedin from "../image/linkedin-logo.png";
-import { BsTelephone } from "react-icons/bs";
+import { BsTelephone, BsLinkedin, BsGithub } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { Fade } from "./utils/Fade";
 
@@ -12,7 +11,7 @@ export function Contact() {
           <ul>
             <li>
               <div className="img">
-                <img src={linkedin} alt="linkedin logo" className="img" />
+                <BsLinkedin />
               </div>
               <a
                 href="www.linkedin.com/in/kristina-jachimovič-a683b3237"
@@ -32,6 +31,12 @@ export function Contact() {
                 <AiOutlineMail />
               </span>
               <span className="text-span">kristtule@gmail.com</span>
+            </li>
+            <li>
+              <span className="img">
+                <BsGithub />
+              </span>
+              <span className="text-span">GitHub</span>
             </li>
           </ul>
         </Fade>

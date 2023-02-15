@@ -83,3 +83,18 @@
     }
   }
 }
+
+#work-text {
+  color: v.$text-color;
+  margin: 50px auto;
+  width: 70%;
+
+  p {
+    margin: 0;
+    display: inline;
+  }
+
+  a {
+    @include m.a-style;
+  }
+}

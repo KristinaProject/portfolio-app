@@ -17,14 +17,7 @@
       margin: 10px 0;
 
       a {
-        color: v.$text-color;
-        text-decoration: none;
-      }
-
-      .img {
-        width: 35px;
-        @include m.flex-center;
-        justify-content: center;
+        @include m.a-style;
       }
 
       .text-span {

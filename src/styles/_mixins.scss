@@ -18,3 +18,8 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin a-style {
+  color: v.$text-color;
+  text-decoration: none;
+}

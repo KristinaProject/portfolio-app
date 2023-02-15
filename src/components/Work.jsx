@@ -33,8 +33,16 @@ export function Work() {
 
   return (
     <div className="bg">
-      <div className="wrapper about">
+      <div className="wrapper">
         <Fade>
+          <div id="work-text">
+            <p>
+              My first project is a portfolio. It is my first self-work. I have
+              other project ideas that I will take on to add to my portfolio.
+              Small works and task can be found on my&nbsp;
+            </p>
+            <a href={"https://github.com/KristinaProject"}>GitHub</a>
+          </div>
           <div className="cards-wrapper">
             {works.map((item) => (
               <div

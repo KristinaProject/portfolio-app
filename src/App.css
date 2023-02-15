@@ -153,12 +153,6 @@ footer p {
   color: white;
   text-decoration: none;
 }
-.cont ul li .img {
-  width: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .cont ul li .text-span {
   margin-left: 10px;
 }
@@ -234,6 +228,20 @@ footer p {
 }
 #bg-modal .modal__text-buttons button:active {
   background-color: #e9abb1;
+}
+
+#work-text {
+  color: white;
+  margin: 50px auto;
+  width: 70%;
+}
+#work-text p {
+  margin: 0;
+  display: inline;
+}
+#work-text a {
+  color: white;
+  text-decoration: none;
 }
 
 .App {
