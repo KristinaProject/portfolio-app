@@ -23,3 +23,11 @@
   color: v.$text-color;
   text-decoration: none;
 }
+
+@mixin fonts {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: oblique;
+}

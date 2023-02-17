@@ -62,21 +62,22 @@
         @include m.flex-center;
         width: 50%;
 
-        button {
+        .buttons-style {
           padding: 10px 30px;
           background-color: transparent;
           border: 2px solid v.$btn-bg;
           border-bottom-width: 5px;
-          color: v.$text-color;
-          font-family: v.$main-font;
           margin-right: 15px;
+          @include m.a-style;
+          font-size: v.$medium-fs;
+          @include m.fonts;
         }
 
-        button:hover {
+        .buttons-style:hover {
           background-color: v.$btn-bg;
         }
 
-        button:active {
+        .buttons-style:active {
           background-color: #e9abb1;
         }
       }
@@ -88,6 +89,7 @@
   color: v.$text-color;
   margin: 50px auto;
   width: 70%;
+  font-size: v.$medium-fs;
 
   p {
     margin: 0;
