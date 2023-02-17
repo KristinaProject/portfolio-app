@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Fade } from "./utils/Fade";
 import { WorkShow } from "./WorkShow";
 import picture from "../image/diego-ph-fIq0tET6llw-unsplash.jpg";
+import app from "../image/Portfolio-App.png";
 
 const works = [
   {
@@ -9,8 +10,7 @@ const works = [
     name: "Portfolio",
     description: "This is my portfolio.",
     tools: "react, html, sass, react-spring",
-    image:
-      "https://cdn.pixabay.com/photo/2023/01/13/15/47/flowers-7716360_960_720.jpg",
+    image: app,
     code: "https://github.com/KristinaProject/portfolio-app",
   },
   {

@@ -8,7 +8,7 @@
   padding-bottom: 50px;
 
   .card {
-    background-color: aliceblue;
+    background-color: v.$btn-bg;
     padding: 30px;
     transition: all 1s ease-in;
     cursor: pointer;
@@ -20,11 +20,13 @@
 
       img {
         max-height: 300px;
+        min-height: 300px;
         @include m.image-style;
       }
     }
 
     h2 {
+      color: v.$text-color;
       margin-bottom: 0;
     }
   }
@@ -58,6 +60,7 @@
 
       img {
         max-height: 400px;
+        min-height: 400px;
         @include m.image-style;
       }
     }
