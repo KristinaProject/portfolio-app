@@ -4,7 +4,9 @@ export function Error() {
   return (
     <div className="errorName">
       <h1>Ups...Something wrong 🎈🎈🎈</h1>
-      <Link to={'/'} className="errorBack">Click back</Link>
+      <Link to={"/"} className="errorBack">
+        Go to main
+      </Link>
     </div>
   );
 }

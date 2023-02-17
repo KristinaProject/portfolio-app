@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export function WorkShow({ setOpen, item, setItem }) {
   return (
     <div id="bg-modal">
@@ -12,19 +10,15 @@ export function WorkShow({ setOpen, item, setItem }) {
           <p className="modal__text-description">{item.description}</p>
           <p className="modal__text-tools">{item.tools}</p>
           <div className="modal__text-buttons">
-            {item.code === "" ? (
-              <></>
-            ) : (
-              <Link className="buttons-style" to={item.code}>
+            {item.code && (
+              <a className="buttons-style" href={item.code}>
                 Code
-              </Link>
+              </a>
             )}
-            {item.live === "" ? (
-              <></>
-            ) : (
-              <Link className="buttons-style" to={item.live}>
+            {item.live && (
+              <a className="buttons-style" href={item.live}>
                 Live
-              </Link>
+              </a>
             )}
             <button
               className="buttons-style"
