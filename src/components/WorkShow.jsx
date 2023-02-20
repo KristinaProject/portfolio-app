@@ -8,7 +8,11 @@ export function WorkShow({ setOpen, item, setItem }) {
         <div className="modal__text">
           <h2 className="modal__text-title">{item.name}</h2>
           <p className="modal__text-description">{item.description}</p>
-          <p className="modal__text-tools">{item.tools}</p>
+          {item.tools ? (
+            <p className="modal__text-tools">Tools: {item.tools}</p>
+          ) : (
+            <></>
+          )}
           <div className="modal__text-buttons">
             {item.code && (
               <a className="buttons-style" href={item.code}>
