@@ -9,7 +9,7 @@ const works = [
     id: 1,
     name: "Portfolio",
     description:
-      "I worked on it and learned new things whenever I had free time. Sometimes there were no commits because I was studying more at the time. The hardest part was creating the animation with react-spring, because it was a new tool for me. Created only desktop version. I coul name it: 'version 1'. In time would create mobile version too.",
+      "I worked on it and learned new things whenever I had free time. Sometimes there were no commits because I was studying more at the time. The hardest part was creating the animation with react-spring, because it was a new tool for me. Created only desktop version. I could name it: 'version-1'. A mobile version will be developed in time.",
     tools: "react, html, sass, react-spring",
     image: app,
     code: "https://github.com/KristinaProject/portfolio-app",
