@@ -36,7 +36,12 @@ export function Contact() {
               <span className="img">
                 <BsGithub />
               </span>
-              <span className="text-span">GitHub</span>
+              <a
+                href="https://github.com/KristinaProject"
+                className="text-span"
+              >
+                GitHub
+              </a>
             </li>
           </ul>
         </Fade>
