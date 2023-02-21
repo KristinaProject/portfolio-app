@@ -2,9 +2,8 @@
 @use "./mixins" as m;
 
 .cards-wrapper {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
+  @include m.grid-temp;
+  grid-template-columns: 1fr 1fr;
   padding-bottom: 50px;
 
   .card {

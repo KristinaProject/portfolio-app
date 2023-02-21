@@ -8,7 +8,6 @@
   .about {
     @include m.flex-center;
     justify-content: center;
-    gap: 50px;
 
     h1 {
       font-size: 45px;
@@ -48,6 +47,7 @@
     .text {
       color: v.$text-color;
       width: 50%;
+      margin-right: 60px;
 
       p {
         font-size: v.$medium-fs;
